@@ -6,7 +6,8 @@
         "paths": {
             "@common/*": ["src/common"],
             "@pages/*": ["src/pages"],
-            "@services/*": ["src/services"]
+            "@services/*": ["src/services"],
+            "@style/*": ["src/style"]
         }
     },
     "exclude": [
