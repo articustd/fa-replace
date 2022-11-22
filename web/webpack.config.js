@@ -23,15 +23,27 @@ module.exports = {
                 }
             },
             {
+                test: /\.(s(a|c)ss)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }, 
+            {
+                test: /\.(gif|png|jpe?g)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/images/'
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.html$/,
                 use: {
                     loader: "html-loader"
                 }
             },
-            {
-                test: /\.(s(a|c)ss)$/,
-                use: ['style-loader','css-loader', 'sass-loader']
-            }
         ]
     },
     output: {
@@ -49,7 +61,8 @@ module.exports = {
             "@common": path.resolve(__dirname, 'src', 'common'),
             "@pages": path.resolve(__dirname, 'src', 'pages'),
             "@services": path.resolve(__dirname, 'src', 'services'),
-            "@style": path.resolve(__dirname, 'src', 'style')
+            "@style": path.resolve(__dirname, 'src', 'style'),
+            "@assets": path.resolve(__dirname, 'src', 'assets')
         },
         extensions: [".js", ".jsx"]
     }

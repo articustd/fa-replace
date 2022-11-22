@@ -7,7 +7,8 @@
             "@common/*": ["src/common"],
             "@pages/*": ["src/pages"],
             "@services/*": ["src/services"],
-            "@style/*": ["src/style"]
+            "@style/*": ["src/style"],
+            "@assets/*": ["src/assets"]
         }
     },
     "exclude": [
