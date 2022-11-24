@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, CardContent, Typography, Paper, Avatar, Box, Divider, Chip, CardMedia } from "@mui/material";
+import { Card, CardContent, Typography, Paper, Avatar, Box, Divider, Chip, CardMedia, CardActionArea } from "@mui/material";
 import book from '@assets/images/book.png'
 import user from '@assets/images/raindrago.jpg'
 
@@ -14,8 +14,8 @@ export function ResultItem(props) {
                 </Box>
                 <Divider orientation="vertical" flexItem/>
                 <Box flex={'auto'} display={"flex"} flexGrow="1" flexDirection={"column"} width={"100%"}>
-                    <Box p={1} flex={'auto'} flexGrow="1"><Typography variant="h5">{props.data.title}</Typography></Box>
-                    <Box p={1} flex={'auto'}  flexGrow="1"><Typography>{props.data.short_desc}</Typography></Box>
+                    <Box p={1} display={'flex'} flex={'auto'} flexGrow="1" alignItems={"center"}><CardActionArea href={`/story?story_id=${props.data.story_id}`} m={1} display={'flex'} flex={'auto'} flexGrow="1" alignItems={"center"}><Typography variant="h5">{props.data.title}</Typography></CardActionArea></Box>
+                    <Box p={1} display={'flex'} flex={'auto'}  flexGrow="1" alignItems={"center"}><Typography>{props.data.short_desc}</Typography></Box>
                     <Divider />
                     <Box display={"flex"} flex={'auto'} flexGrow="1" height={'2.5em'} >
                         <Box  display={"flex"} flex={"auto"} flexGrow="3" alignItems={"center"} justifyContent={'center'}><Typography fontWeight={600}>{props.data.published_date}</Typography></Box>

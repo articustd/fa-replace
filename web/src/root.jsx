@@ -6,6 +6,7 @@ import Dev from '@pages/dev'
 import ErrorPage from '@pages/error-page'
 import Homepage from '@pages/homepage'
 import SearchPage from '@pages/search-page'
+import StoryPage from './pages/story-page'
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container)
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     {
         path: "search",
         element: <SearchPage />
+    },
+    {
+        path: "story",
+        element: <StoryPage />
     }
 ])
 
